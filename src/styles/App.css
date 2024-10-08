@@ -79,3 +79,30 @@ p {
   color: #555;
   font-size: 1rem;
 }
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 10px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navbar a:hover {
+  color: #ff6347;
+}
+.product-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-image {
+  max-width: 150px;
+  height: auto;
+  margin: 0 auto;
+}

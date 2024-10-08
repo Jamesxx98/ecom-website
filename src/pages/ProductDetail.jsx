@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 const ProductDetail = () => {
@@ -7,18 +7,21 @@ const ProductDetail = () => {
 
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${id}`)
-      .then((res) => res.json())
-      .then((data) => setProduct(data));
+      .then(res => res.json())
+      .then(data => setProduct(data))
+      .catch(error => console.error('Error fetching product:', error));
   }, [id]);
 
-  if (!product) return <p>Loading...</p>;
+  if (!product) {
+    return <div>Loading...</div>;
+  }
 
   return (
-    <div>
+    <div className="product-detail">
       <img src={product.image} alt={product.title} />
-      <h1>{product.title}</h1>
+      <h2>{product.title}</h2>
       <p>{product.description}</p>
-      <p>${product.price}</p>
+      <p>Price: ${product.price}</p>
     </div>
   );
 };

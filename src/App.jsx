@@ -1,8 +1,10 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import ProductDetail from './pages/ProductDetail';
-import AddProduct from './pages/AddProduct';
+import CategoryPage from './pages/CategoryPage';
 import Navbar from './components/Navbar';
+import './styles/App.css';
 
 function App() {
   return (
@@ -11,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<ProductDetail />} />
-        <Route path="/add-product" element={<AddProduct />} />
+        <Route path="/category/:name" element={<CategoryPage />} />
       </Routes>
     </Router>
   );
