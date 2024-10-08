@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ProductList from '../components/ProductList';
-import './styles/LandingPage.css'; // Import your custom styles
+
 
 const Home = () => {
   const [products, setProducts] = useState([]);
