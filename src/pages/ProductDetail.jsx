@@ -23,7 +23,7 @@ const ProductDetail = () => {
       <img src={product.image} alt={product.title} />
       <h2>{product.title}</h2>
       <p>{product.description}</p>
-      <p>Price: ${product.price}</p>
+      <p>Price: KES{product.price}</p>
     </div>
   );
 };
