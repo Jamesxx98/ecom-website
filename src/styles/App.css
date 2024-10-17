@@ -1,12 +1,12 @@
-/* style.css */
 
 body {
   font-family: Arial, sans-serif;
   padding: 20px;
+  background-color: #ffffff;
 }
 
 nav {
-  background-color: #333;
+  background-color: #333333;
   padding: 10px;
 }
 
@@ -45,44 +45,24 @@ p {
   font-size: 1rem;
   color: #333;
 }
-/* Styling the product item container */
-.product-item {
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  transition: transform 0.3s ease;
-}
 
-/* Limit the product image size to make them more uniform */
-.product-image {
-  max-width: 150px;  /* Maximum width for the image */
-  max-height: 150px; /* Maximum height for the image */
-  object-fit: contain; /* Ensure the image fits within the bounds without distortion */
-  margin-bottom: 10px;
-}
-
-/* Add a hover effect for better interaction */
 .product-item:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
+  transform: scale(1.05); 
 }
 
-/* Styling for product details */
 h2 {
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
 p {
-  color: #555;
+  color: #000000;
   font-size: 1rem;
 }
 .navbar {
   display: flex;
   justify-content: space-around;
-  background-color: #333;
+  background-color: #4d4949;
   padding: 10px;
 }
 
@@ -93,16 +73,45 @@ p {
 }
 
 .navbar a:hover {
-  color: #ff6347;
+  color: rgb(111, 154, 218);
+}
+.welcome-message {
+  color: #ffffff; 
+  font-weight: bold; 
+}
+
+.cart-count {
+  color: #28a745; 
+  font-weight: bold; 
+}
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+  gap: 20px; 
+  padding: 20px; 
 }
 .product-card {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center;
+  width: 250px; /* Set the desired width */
+  height: 350px; /* Set the desired height */
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product-card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .product-image {
-  max-width: 150px;
-  height: auto;
-  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
+
+

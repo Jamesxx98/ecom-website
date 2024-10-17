@@ -1,11 +1,12 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
+import { AppContext } from '../context/AppContext'; 
 import ProductList from '../components/ProductList';
 
 const CategoryPage = () => {
   const { name } = useParams();
   const [products, setProducts] = useState([]);
+  const { addToCart } = useContext(AppContext); // Access the addToCart function
 
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/category/${name}`)
@@ -18,6 +19,7 @@ const CategoryPage = () => {
     <div>
       <h1>Category: {name}</h1>
       <ProductList products={products} />
+      <ProductList products={products} addToCart={addToCart} />
     </div>
   );
 };

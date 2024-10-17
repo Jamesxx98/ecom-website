@@ -3,8 +3,7 @@ import React from 'react';
 import ProductCard from './ProductCard';
 import PropTypes from 'prop-types';
 
-
-const ProductList = ({ products }) => {
+const ProductList = ({ products, addToCart }) => {
   if (!products || products.length === 0) {
     return <p>No products available.</p>;
   }
@@ -12,14 +11,15 @@ const ProductList = ({ products }) => {
   return (
     <div className="product-list">
       {products.map(product => (
-        <ProductCard key={product.id} product={product} />
+        <ProductCard key={product.id} product={product} addToCart={addToCart} />
       ))}
     </div>
   );
 };
 
 ProductList.propTypes = {
-  products: PropTypes.array.isRequired
+  products: PropTypes.array.isRequired,
+  addToCart: PropTypes.func.isRequired,
 };
 
 export default ProductList;
