@@ -2,20 +2,16 @@
 import React, { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
 
-// Create a context object for the application
+
 export const AppContext = createContext();
 
-// AppProvider component that will wrap the entire application to provide context values
 export const AppProvider = ({ children }) => {
-  // State for storing cart items. Initially an empty array.
   const [cart, setCart] = useState([]);
 
-  // State for storing user information. Initially null (no user logged in).
   const [user, setUser] = useState(null);
 
-  // Function to add a product to the cart.
   const addToCart = (product) => {
-    setCart([...cart, product]);  // Append the new product to the existing cart
+    setCart([...cart, product]);  
   };
 
   // Function to simulate a user signup. This would usually involve an API call to register a user.
